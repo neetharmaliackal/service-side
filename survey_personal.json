@@ -1,0 +1,46 @@
+[
+    {
+        "surveyid":1,
+        "surveytype":"personal-survey",
+        "surveycontrollers":[
+            {
+                "id":"personal",
+                "text":"First Name",
+                "type":"text-box",
+                "flag":true
+            },
+            {
+                "id":"personal",
+                "text":"Middle Name",
+                "optional":true,
+                "type":"text-box",
+                "flag":true
+            },
+            {
+                "id":"personal",
+                "text":"Last Name",
+                "type":"text-box",
+                "flag":true
+            },
+            {
+                "id":"personal",
+                "text":"Date of Birth",
+                "type":"listbox",
+                "flag":true
+            },
+            {
+                "id":"personal",
+                "text":"Gender",
+                "type":"RadioButton",
+                "flag":true
+            },
+            {
+                "id":"personal",
+                "text":"Address",
+                "type":"Textarrea",
+                "flag":true
+            }
+        ]
+    }
+
+]
