@@ -9,13 +9,16 @@ const fs=require('fs');
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-function writeToFile(data) {
+function writeDataToFile(data) {
 console.log("data", data);
+//  fs.writefileSync('persondata.json',data); 
 // fs.writefileSync('persondata.txt',data); 
- fs.writeFile('persondata.txt',data, function (err) {
+ fs.writeFile('persondata.json', new Buffer(JSON.stringify(data)), 
+ function (err) {
   if (err) return console.log(err);
-    console.log('Hello World > helloworld.txt');
-   });
+    console.log('Hello World ');
+   }
+   );
 }
 // app.post('/api/home/personalsurvey/formsubmission', (req, res) => { 
 //          //get requests to the root ("/") will route here
@@ -48,5 +51,5 @@ console.log("data", data);
 // });
 
 module.exports = {
-    writeToFile
+  writeDataToFile
 }

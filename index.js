@@ -15,7 +15,7 @@ app.get('/api/home/personalsurvey/form', (req, res) => {
                                                      
 });
 app.post('/api/home/personalsurvey/formsubmission', (req, res) => { 
-    controller.Object.writeToFile(req.body)
+    controller.writeDataToFile(req.body);
                                               //get requests to the root ("/") will route here
 //  var FirstName = req.body.FirstName;
 // var MiddleName = req.body.MiddleName;  
@@ -27,6 +27,10 @@ app.post('/api/home/personalsurvey/formsubmission', (req, res) => {
 //     if (err) return console.log(err);
 //     console.log('Hello World > helloworld.txt');
 //   });
+});
+app.get('/api/home/personalsurvey/userdata', (req, res) => {       
+    res.sendFile('persondata.txt', {root: __dirname});     
+                                                     
 });
 
 
