@@ -1,12 +1,45 @@
-const express = require('express'); //Import the express dependency
-const app = express();              //Instantiate an express app, the main work horse of this server
-const port = 5000;                  //Save the port number where your server will be listening
+const express = require('express');
+// const fs=require('fs'); 
+// import fs from 'fs';
+const controller = require('./controllers/personal-controller');
+// import {fs} from 'fs';
+const app = express();              
+const port = 5000;                  
 const router=express.Router();
-//Idiomatic expression in express to route and respond to a client request
-app.get('/api/home/personalsurvey/form', (req, res) => {        //get requests to the root ("/") will route here
-    res.sendFile('survey_personal.json', {root: __dirname});      //server responds by sending the index.html file to the client's browser
-                                                        //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.get('/api/home/personalsurvey/form', (req, res) => {       
+    res.sendFile('survey_personal.json', {root: __dirname});     
+                                                     
 });
+app.post('/api/home/personalsurvey/formsubmission', (req, res) => { 
+    controller.Object.writeToFile(req.body)
+                                              //get requests to the root ("/") will route here
+//  var FirstName = req.body.FirstName;
+// var MiddleName = req.body.MiddleName;  
+// var lastName= req.body.lastName; 
+// var user=req.body; 
+// console.log("req.body",req.body);
+// fs.writefileSync('persondata.txt',user); 
+// fs.writeFile('persondata.txt',user, function (err) {
+//     if (err) return console.log(err);
+//     console.log('Hello World > helloworld.txt');
+//   });
+});
+
+
+
+
+// async function openFile() {
+//     try {
+//         var user=req.body; 
+//       await fs.writeFile('persondata.txt',user); 
+//     } catch (error) {
+//       console.error(`Got an error trying to write to a file: `);
+//     }
+//   }
 
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port ${port}`); 

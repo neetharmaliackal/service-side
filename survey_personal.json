@@ -8,6 +8,7 @@
             "type":"text-box",
             "value": "",
             "flag":true,
+            "formcontrolName":"firstName",
             "validators":{
                 "required":true,
                    "minLength": 10
@@ -20,6 +21,7 @@
             "type":"text-box",
             "value": "",
             "flag":true,
+            "formcontrolName":"middleName",
             "validators":{
                 "required":true
             }
@@ -30,16 +32,7 @@
             "type":"text-box",
             "value": "",
             "flag":true,
-            "validators":{
-                "required":true
-            }
-        },
-        {
-            "id":"personal",
-            "text":"Date of Birth",
-            "type":"listbox",
-            "value": "",
-            "flag":true,
+            "formcontrolName":"lastName",
             "validators":{
                 "required":true
             }
@@ -48,7 +41,13 @@
             "id":"personal",
             "text":"Gender",
             "type":"RadioButton",
+            "formcontrolName":"radio",
             "value": "",
+            "options": [
+                { "key": "male", "value": "Male"},
+                { "key": "Female", "value": "Female"}
+
+              ],
             "flag":true,
             "validators":{
                 "required":true
@@ -58,13 +57,13 @@
         {
             "id":"personal",
             "text":"Address",
-            "type":"Textarrea",
+            "type":"Textarea",
+            "formcontrolName":"address",
             "value": "",
             "flag":true,
             "validators":{
                 "required":true
             }
-
         }
     ]
 }
