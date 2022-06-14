@@ -1,23 +1,31 @@
-const fs = require("fs");
+const fs = require('fs/promises');
 
-function writeDataToFile(data) {
+
+async function writeDataToFile(data) {
  
+    let fileContents = await fs.readFile('persondata.json', { encoding: 'utf8' });
+    fileContents = JSON.parse(fileContents);
+    console.log("filecontent",fileContents);
+    fileContents.push(data);
+    await fs.writeFile('persondata.json', JSON.stringify(fileContents, null, 2), { encoding: 'utf8' });
+
 //  const file= fs.writeFile('persondata.json', new Buffer(JSON.stringify(data)), 
 //  function (err) {
 //   if (err) return console.log(err);
 //     console.log('Hello World ');
 //    }
 //    );
-fs.appendFile('persondata.json', new Buffer(JSON.stringify(data)), function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-});
-const feed=fs.readFile('persondata.json', (err, data) => {
-  console.log(data);
-})
-var userdata = [];
- userdata.push(feed);
-console.log(feed);
+// fs.appendFile('persondata.json', (JSON.stringify(data)), function (err) {
+//   if (err) throw err;
+//   // console.log('Saved!');
+// });
+// const feed=fs.readFile('persondata.json', (err, data) => {
+//   console.log("file read",data);
+// })
+
+// var userdata = [];
+//  userdata.push(feed);
+// console.log(feed);
 }
   // console.log("data", data);
   //  fs.writefileSync('persondata.json',data);
