@@ -16,35 +16,14 @@ app.get('/api/home/personalsurvey/form', (req, res) => {
 });
 app.post('/api/home/personalsurvey/formsubmission', (req, res) => { 
     controller.writeDataToFile(req.body);
-                                              //get requests to the root ("/") will route here
-//  var FirstName = req.body.FirstName;
-// var MiddleName = req.body.MiddleName;  
-// var lastName= req.body.lastName; 
-// var user=req.body; 
-// console.log("req.body",req.body);
-// fs.writefileSync('persondata.txt',user); 
-// fs.writeFile('persondata.txt',user, function (err) {
-//     if (err) return console.log(err);
-//     console.log('Hello World > helloworld.txt');
-//   });
+    res.send("success");
 });
-app.get('/api/home/personalsurvey/userdata', (req, res) => {       
-    res.sendFile('persondata.txt', {root: __dirname});     
+app.get('/api/home/personalsurvey/userdata', (req, res) => {  
+    // res.json({status: 'success'})   ;  
+    res.sendFile('persondata.json', {root: __dirname});     
                                                      
 });
 
-
-
-
-// async function openFile() {
-//     try {
-//         var user=req.body; 
-//       await fs.writeFile('persondata.txt',user); 
-//     } catch (error) {
-//       console.error(`Got an error trying to write to a file: `);
-//     }
-//   }
-
-app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
+app.listen(port, () => {         
     console.log(`Now listening on port ${port}`); 
 });

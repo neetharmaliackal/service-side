@@ -1,55 +1,67 @@
-// const config=require('config');
-const fs=require('fs'); 
-// const express = require('express');
-
-// const app = express();              
-// const port = 5000;                  
-// const router=express.Router();
-// const bodyParser = require("body-parser");
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
+const fs = require("fs");
 
 function writeDataToFile(data) {
-console.log("data", data);
-//  fs.writefileSync('persondata.json',data); 
-// fs.writefileSync('persondata.txt',data); 
- fs.writeFile('persondata.json', new Buffer(JSON.stringify(data)), 
- function (err) {
-  if (err) return console.log(err);
-    console.log('Hello World ');
-   }
-   );
+ 
+//  const file= fs.writeFile('persondata.json', new Buffer(JSON.stringify(data)), 
+//  function (err) {
+//   if (err) return console.log(err);
+//     console.log('Hello World ');
+//    }
+//    );
+fs.appendFile('persondata.json', new Buffer(JSON.stringify(data)), function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+const feed=fs.readFile('persondata.json', (err, data) => {
+  console.log(data);
+})
+var userdata = [];
+ userdata.push(feed);
+console.log(feed);
 }
-// app.post('/api/home/personalsurvey/formsubmission', (req, res) => { 
-//          //get requests to the root ("/") will route here
-// //  var FirstName = req.body.FirstName;
-// // var MiddleName = req.body.MiddleName;  
-// // var lastName= req.body.lastName; 
-// // var user=req.body; 
-// console.log("req.body",req.body);
-// // fs.writefileSync('persondata.txt',user); 
-// // fs.writeFile('persondata.txt',user, function (err) {
-// //     if (err) return console.log(err);
-// //     console.log('Hello World > helloworld.txt');
-// //   });
-// });
+  // console.log("data", data);
+  //  fs.writefileSync('persondata.json',data);
+  //----------------
+  // user = [data];
+  // if (user.length > 0) {
+  //   // user = [];
+  //   if(user.firstName!=data.firstName && user.lastName!=data.lastName && user.middleName!=data.middleName)
+  //   { 
+  //     user = [...user, data];
+  //   }
+  
+  // } else {
+  //   user = data;
+  // }
+  // console.log("user", user);
+  //  -------------
+  // user = fs.readFile('persondata.json', new Buffer(JSON.stringify(data)), 
+  // function (err) {
+  //  if (err) return console.log(err);
+  //    console.log('Hello World ');
+  //   }
+  //   );
+    // user = [...user, data];
+    //  fs.writeFile('persondata.json', new Buffer(JSON.stringify(user)), 
+    // function (err) {
+    //  if (err) return console.log(err);
+    //    console.log('Hello World ');
+    //   }
+      // );
+      // console.log("user", user);
+      //----------
+  //  if('persondata.json' !=null){
+  //    Datasaved=true;
+  //    fs.appendFile('persondata.json',new Buffer(JSON.stringify(data)), function (err) {
+  //     if (err) throw err;
+  //     console.log('Saved!');
+  //   });
+  //   // fs.writefileSync('persondata.json', new Buffer(JSON.stringify(data)));
+  //   // console.log('Saved!');
+  // fs.appendFileSync("persondata.json",new Buffer(JSON.stringify(data)));
+  //  }
 
-
-
-
-// async function openFile() {
-//     try {
-//         var user=req.body; 
-//       await fs.writeFile('persondata.txt',user); 
-//     } catch (error) {
-//       console.error(`Got an error trying to write to a file: `);
-//     }
-//   }
-
-// app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
-//     console.log(`Now listening on port ${port}`); 
-// });
 
 module.exports = {
-  writeDataToFile
-}
+  writeDataToFile,
+};
