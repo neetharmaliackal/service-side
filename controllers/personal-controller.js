@@ -6,18 +6,43 @@ async function writeDataToFile(data,userId) {
      data.id=userId;
     let fileContents = await fs.readFile('persondata.json', { encoding: 'utf8' });
     fileContents = JSON.parse(fileContents);
-    console.log("filecontent",fileContents);
     fileContents.push(data);
-    // fileContents.push(userId);
     await fs.writeFile('persondata.json', JSON.stringify(fileContents, null, 2), { encoding: 'utf8' });
 
 }
+
+async function ReadApproveUserdata(user) {
+
+  userId=user.id;
+  status=user.status;
+  let fileContents = await fs.readFile('persondata.json', { encoding: 'utf8' });
+  fileContents = JSON.parse(fileContents);
+  for(i=0;i<fileContents.length;i++) {
+    // console.log("approveduserid",fileContents[i].id);
+    // console.log("userId",userId);
+    if(fileContents[i].id===userId && fileContents[i].status){
+
+       fileContents[i].status=status
+      // console.log("approveduser",fileContents[i].id);
+      // console.log("userId",userId);
+      //  console.log("fileContents[i].status",fileContents[i].status);
+     
+    }
+    
+  
+  }
+  await fs.writeFile('persondata.json', JSON.stringify(fileContents, null, 2), { encoding: 'utf8' });
+ 
+
+}
+  // var output = arr.filter(function(value){ return value.city=="Amsterdam";})
+
 
 // async function writeApprovedUsersToFile(data,userId) {
  
 //   let fileContents = await fs.readFile('ApprovedPersons.json', { encoding: 'utf8' });
 //   fileContents = JSON.parse(fileContents);
-//   console.log("filecontent",fileContents);
+
 //   fileContents.push(data);
 //   fileContents.push(userId);
 //   await fs.writeFile('ApprovedPersons.json', JSON.stringify(fileContents, null, 2), { encoding: 'utf8' });
@@ -28,5 +53,5 @@ async function writeDataToFile(data,userId) {
 
 module.exports = {
   writeDataToFile,
-  // writeApprovedUsersToFile
+  ReadApproveUserdata
 };

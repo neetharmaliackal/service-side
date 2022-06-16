@@ -28,6 +28,11 @@ app.get('/api/home/personalsurvey/userdata', (req, res) => {
 });
 
 app.put('/api/home/personalsurvey/approved', (req, res) => { 
+    // console.log(req.body);
+    controller.ReadApproveUserdata(req.body);
+    res.send(req.body);
+ 
+
     // const {firstName, middleName,lastName,radio,address} = req.body 
     // const userId = uuidv4();
     // console.log(userId,req.body);
