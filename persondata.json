@@ -5,7 +5,70 @@
     "lastName": "xavier",
     "radio": "Female",
     "address": "kollam",
-    "status": "reject",
+    "status": "approve",
     "id": "f6622734-c9ca-431a-84d1-6c038b53a36f"
+  },
+  {
+    "firstName": "Lilly",
+    "middleName": "MP",
+    "lastName": "Raphel",
+    "radio": "Female",
+    "address": "Mala",
+    "status": "approve",
+    "id": "aa2b1e8c-cf8a-4794-9311-fae228e6cdf7"
+  },
+  {
+    "firstName": "Raphel",
+    "middleName": "M",
+    "lastName": "A",
+    "radio": "male",
+    "address": "Kottayam",
+    "status": "reject",
+    "id": "a4fb3318-81e2-4cc6-a181-fc1ccdf493e8"
+  },
+  {
+    "firstName": "Manu",
+    "middleName": "b",
+    "lastName": "Thomas",
+    "radio": "male",
+    "address": "palakad",
+    "status": "pending",
+    "id": "4bb950b7-e546-4fb0-b576-0acfbdd5e920"
+  },
+  {
+    "firstName": "Annmariya",
+    "middleName": "B ",
+    "lastName": "Thomas",
+    "radio": "Female",
+    "address": "Kottayam",
+    "status": "pending",
+    "id": "644c565c-642d-459d-8267-35874aea97ec"
+  },
+  {
+    "firstName": "Navya",
+    "middleName": "k",
+    "lastName": "Francis",
+    "radio": "Female",
+    "address": "kochi",
+    "status": "pending",
+    "id": "91b40379-0d15-4853-9707-81f3fb682936"
+  },
+  {
+    "firstName": "neetha",
+    "middleName": "R",
+    "lastName": "maliackal",
+    "radio": "Female",
+    "address": "Thrissur",
+    "status": "reject",
+    "id": "fb4f35ae-865e-4bf0-bb3e-3d1061a72821"
+  },
+  {
+    "firstName": "alan",
+    "middleName": "p",
+    "lastName": "Jacob",
+    "radio": "male",
+    "address": "alapuzha",
+    "status": "pending",
+    "id": "6b788a98-f930-40a4-960f-bef3bbe05175"
   }
 ]
