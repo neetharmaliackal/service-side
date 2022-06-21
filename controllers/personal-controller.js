@@ -35,19 +35,7 @@ async function ReadApproveUserdata(user) {
  
 
 }
-  // var output = arr.filter(function(value){ return value.city=="Amsterdam";})
 
-
-// async function writeApprovedUsersToFile(data,userId) {
- 
-//   let fileContents = await fs.readFile('ApprovedPersons.json', { encoding: 'utf8' });
-//   fileContents = JSON.parse(fileContents);
-
-//   fileContents.push(data);
-//   fileContents.push(userId);
-//   await fs.writeFile('ApprovedPersons.json', JSON.stringify(fileContents, null, 2), { encoding: 'utf8' });
-
-// }
   
 
 

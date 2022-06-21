@@ -52,11 +52,11 @@ app.put('/api/home/personalsurvey/approved', (req, res) => {
      
                                                      
 });
-app.put('/api/home/personalsurvey/rejected', (req, res) => {  
-    // res.json({status: 'success'})   ;  
+// app.put('/api/home/personalsurvey/rejected', (req, res) => {  
+//     // res.json({status: 'success'})   ;  
      
                                                      
-});
+// });
 
 app.listen(port, () => {         
     console.log(`Now listening on port ${port}`); 
