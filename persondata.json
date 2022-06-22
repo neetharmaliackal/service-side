@@ -5,7 +5,7 @@
     "lastName": "xavier",
     "radio": "Female",
     "address": "kollam",
-    "status": "approve",
+    "status": "rejected",
     "id": "f6622734-c9ca-431a-84d1-6c038b53a36f"
   },
   {
@@ -14,7 +14,7 @@
     "lastName": "Raphel",
     "radio": "Female",
     "address": "Mala",
-    "status": "approve",
+    "status": "approved",
     "id": "aa2b1e8c-cf8a-4794-9311-fae228e6cdf7"
   },
   {
@@ -23,7 +23,7 @@
     "lastName": "A",
     "radio": "male",
     "address": "Kottayam",
-    "status": "reject",
+    "status": "approved",
     "id": "a4fb3318-81e2-4cc6-a181-fc1ccdf493e8"
   },
   {
@@ -32,7 +32,7 @@
     "lastName": "Thomas",
     "radio": "male",
     "address": "palakad",
-    "status": "pending",
+    "status": "rejected",
     "id": "4bb950b7-e546-4fb0-b576-0acfbdd5e920"
   },
   {
@@ -41,7 +41,7 @@
     "lastName": "Thomas",
     "radio": "Female",
     "address": "Kottayam",
-    "status": "pending",
+    "status": "rejected",
     "id": "644c565c-642d-459d-8267-35874aea97ec"
   },
   {
@@ -50,7 +50,7 @@
     "lastName": "Francis",
     "radio": "Female",
     "address": "kochi",
-    "status": "pending",
+    "status": "rejected",
     "id": "91b40379-0d15-4853-9707-81f3fb682936"
   },
   {
@@ -59,7 +59,7 @@
     "lastName": "maliackal",
     "radio": "Female",
     "address": "Thrissur",
-    "status": "reject",
+    "status": "pending",
     "id": "fb4f35ae-865e-4bf0-bb3e-3d1061a72821"
   },
   {
@@ -70,5 +70,45 @@
     "address": "alapuzha",
     "status": "pending",
     "id": "6b788a98-f930-40a4-960f-bef3bbe05175"
+  },
+  {
+    "firstName": "Nithin",
+    "middleName": "R",
+    "lastName": "Maliackal",
+    "radio": "male",
+    "address": "Thrissur",
+    "status": "approved",
+    "id": "27a0c272-b26f-4ead-abd7-3811e5266bac"
+  },
+  {
+    "firstName": "stibin",
+    "middleName": "p",
+    "lastName": "varghese",
+    "radio": "male",
+    "address": "ijk",
+    "status": "approved",
+    "id": "b9f5c909-29dc-4ab2-a0c6-df83a1d7217b"
+  },
+  {
+    "firstName": "vishnu",
+    "middleName": "p",
+    "lastName": "ada",
+    "radio": "male",
+    "address": "adas",
+    "status": "pending",
+    "id": "08486374-da05-42d8-af24-0699dd8ef22f"
+  },
+  {
+    "firstName": "neetha",
+    "middleName": "R",
+    "lastName": "maliackal",
+    "radio": "Female",
+    "address": "thrissur",
+    "status": "rejected",
+    "id": "4ca5a128-36d6-41f3-9207-5665c6ae4586"
+  },
+  {
+    "status": "pending",
+    "id": "af991d21-7d99-42d1-acc7-c77c53414393"
   }
 ]

@@ -1,9 +1,77 @@
-{
-    "surveyid":1,
-    "surveytype":"personal-survey",
+[
+  {
+    "surveyid": 1,
+    "surveytype": "personal-survey",
+    "surveycontrollers": [
+      {
+        "id": "personal",
+        "text": "First Name",
+        "type": "text-box",
+        "value": "",
+        "flag": true,
+        "formcontrolName": "firstName",
+        "validators": {
+          "required": true,
+          "minLength": 10
+        }
+      },
+      {
+        "id": "personal",
+        "text": "Middle Name",
+        "optional": true,
+        "type": "text-box",
+        "value": "",
+        "flag": true,
+        "formcontrolName": "middleName",
+        "validators": {
+          "required": true
+        }
+      },
+      {
+        "id": "personal",
+        "text": "Last Name",
+        "type": "text-box",
+        "value": "",
+        "flag": true,
+        "formcontrolName": "lastName",
+        "validators": {
+          "required": true
+        }
+      },
+      {
+        "id": "personal",
+        "text": "Gender",
+        "type": "RadioButton",
+        "formcontrolName": "radio",
+        "value": "",
+        "options": [
+          { "key": "male", "value": "Male" },
+          { "key": "Female", "value": "Female" }
+        ],
+        "flag": true,
+        "validators": {
+          "required": true
+        }
+      },
+      {
+        "id": "personal",
+        "text": "Address",
+        "type": "Textarea",
+        "formcontrolName": "address",
+        "value": "",
+        "flag": true,
+        "validators": {
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "surveyid":2,
+    "surveytype":"extra-survey",
     "surveycontrollers":[
         {
-            "id":"personal",
+            "id":"extra",
             "text":"First Name",
             "type":"text-box",
             "value": "",
@@ -14,20 +82,9 @@
                    "minLength": 10
             }
         },
+
         {
-            "id":"personal",
-            "text":"Middle Name",
-            "optional":true,
-            "type":"text-box",
-            "value": "",
-            "flag":true,
-            "formcontrolName":"middleName",
-            "validators":{
-                "required":true
-            }
-        },
-        {
-            "id":"personal",
+            "id":"extra",
             "text":"Last Name",
             "type":"text-box",
             "value": "",
@@ -37,25 +94,9 @@
                 "required":true
             }
         },
+        
         {
-            "id":"personal",
-            "text":"Gender",
-            "type":"RadioButton",
-            "formcontrolName":"radio",
-            "value": "",
-            "options": [
-                { "key": "male", "value": "Male"},
-                { "key": "Female", "value": "Female"}
-
-              ],
-            "flag":true,
-            "validators":{
-                "required":true
-            }
-
-        },
-        {
-            "id":"personal",
+            "id":"extra",
             "text":"Address",
             "type":"Textarea",
             "formcontrolName":"address",
@@ -68,3 +109,4 @@
         }
     ]
 }
+]
